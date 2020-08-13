@@ -1,11 +1,9 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import altair as alt
 
 
 #Data from EU Open Data Portal
 df = pd.read_excel(r'/Users/karolina/Desktop/COVID-19-geographic-disbtribution-worldwide.xlsx')
-plt.style.use('seaborn-whitegrid')
 countries = ['Germany', 'United_Kingdom', 'Italy', 'France', 'Spain', 'Ukraine', 'Romania', 'Netherlands', 'Belgium', 'Poland']
 df = df[df['countriesAndTerritories'].isin(countries)]
 interval = alt.selection_interval()
